@@ -35,7 +35,7 @@ All dependencies (libigl, Eigen, GLFW, etc.) are **automatically downloaded** vi
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/yousef20920/csc317-showcase.git
 cd csc317-showcase
 
 # Create build directory and build
