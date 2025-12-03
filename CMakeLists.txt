@@ -41,20 +41,11 @@ if(LIBIGL_GLFW)
   target_link_libraries(lib PUBLIC igl::glfw)
 endif()
 
-set(DENSE "${PROJECT_NAME}_dense")
-add_executable(${DENSE} "main.cpp")
-target_link_libraries(${PROJECT_NAME}_dense PRIVATE lib)
-
-set(SPARSE "${PROJECT_NAME}_sparse")
-add_executable(${SPARSE} "main.cpp")
-target_compile_definitions(${SPARSE} PRIVATE SPARSE)
-target_link_libraries(${SPARSE} PRIVATE lib)
-
 set(SHOWCASE "${PROJECT_NAME}_showcase")
 add_executable(${SHOWCASE} "main_showcase.cpp" "src/JelloMesh.cpp")
 target_link_libraries(${SHOWCASE} PRIVATE lib)
 
-foreach(tgt IN ITEMS lib ${DENSE} ${SPARSE} ${SHOWCASE})
+foreach(tgt IN ITEMS lib ${SHOWCASE})
   if (MSVC)
     target_compile_options(${tgt} PRIVATE /W4 /permissive-)
   else()

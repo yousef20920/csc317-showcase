@@ -80,7 +80,7 @@ struct JelloState {
         if(mode == 4) { // Basketball
             if(current_mesh_type != SPHERE) { current_mesh_type = SPHERE; mesh_changed = true; }
             k = 1e7; damping = 0.999; restitution = 0.98; friction = 0.1; // Super stiff & bouncy
-            solver_iterations = 1000; // Hardcore iterations for rigidity
+            solver_iterations = 100; // Reduced from 1000 for better performance
         } else {
             solver_iterations = 100; // Standard iterations
             if(current_mesh_type != CUBE) { current_mesh_type = CUBE; mesh_changed = true; }
