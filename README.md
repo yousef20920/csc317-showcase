@@ -3,7 +3,6 @@
 ## Personal Information
 **Name:** Yousef Abdelhadi
 **UtorID:** abdel192
-**Student Number:** [Your Student Number]
 **Assignment Augmented:** A8 (Mass-Spring Systems) and A6 (Shader Pipeline - for lighting/materials)
 
 ## Requirements
